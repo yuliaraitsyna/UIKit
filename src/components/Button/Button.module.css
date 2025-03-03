@@ -1,0 +1,172 @@
+@import url("/src/styles/fonts/fonts.css");
+@import url("/src/styles/colors/colors.css");
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Raleway", "san-serif";
+  padding: 5px;
+  transition:
+    transform 0.2s,
+    background-color 0.3s ease;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: none;
+  transition: transform 0.1s ease-out;
+}
+
+.small {
+  min-width: 50px;
+  width: fit-content;
+  min-height: 30px;
+  height: fit-content;
+}
+
+.medium {
+  min-width: 100px;
+  width: fit-content;
+  min-height: 40px;
+  height: fit-content;
+  font-size: 16px;
+}
+
+.large {
+  width: 300px;
+  min-height: 50px;
+  height: fit-content;
+  font-size: 20px;
+}
+
+.fullWidth {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.filled.primary {
+  background-color: var(--primary-color);
+  box-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+.filled.secondary {
+  background-color: var(--secondary-color);
+  box-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+.filled.plain {
+  background-color: var(--plain-color);
+  box-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+.outlined {
+  background-color: transparent;
+  border: 2px solid transparent;
+  box-shadow: none;
+  color: inherit;
+}
+
+.outlined.primary {
+  border: solid 2px var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: 2px 2px 4px var(--primary-color);
+}
+
+.outlined.secondary {
+  border: solid 2px var(--secondary-color);
+  color: var(--secondary-color);
+  box-shadow: 2px 2px 4px var(--secondary-color);
+}
+
+.outlined.plain {
+  border: solid 2px var(--plain-color);
+  color: var(--plain-color);
+  box-shadow: 2px 2px 4px var(--plain-color);
+}
+
+.text {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  box-shadow: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+.text.primary {
+  color: var(--primary-color);
+}
+
+.text.secondary {
+  color: var(--secondary-color);
+}
+
+.text.plain {
+  color: var(--plain-color);
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filled.primary:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.filled.secondary:hover {
+  background-color: var(--secondary-hover-color);
+}
+
+.filled.plain:hover {
+  background-color: var(--plain-hover-color);
+}
+
+.outlined.primary:hover {
+  border-color: var(--primary-hover-color);
+  color: var(--primary-hover-color);
+  box-shadow: 2px 2px 6px var(--primary-hover-color);
+}
+
+.outlined.secondary:hover {
+  border-color: var(--secondary-hover-color);
+  color: var(--secondary-hover-color);
+  box-shadow: 2px 2px 6px var(--secondary-hover-color);
+}
+
+.outlined.plain:hover {
+  border-color: var(--plain-hover-color);
+  color: var(--plain-hover-color);
+  box-shadow: 2px 2px 6px var(--plain-hover-color);
+}
+
+.text.primary:hover {
+  text-decoration: underline;
+  color: var(--primary-hover-color);
+}
+
+.text.secondary:hover {
+  text-decoration: underline;
+  color: var(--secondary-hover-color);
+}
+
+.text.plain:hover {
+  text-decoration: underline;
+  color: var(--plain-hover-color);
+}
+
+.button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
