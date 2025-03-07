@@ -6,4 +6,6 @@
   --plain-color: #000;
   --plain-hover-color: #00000090;
   --shadow-color: #00000040;
+  --label-color: #b8b8b8;
+  --disabled-color: #b8b8b820;
 }
