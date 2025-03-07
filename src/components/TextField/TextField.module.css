@@ -1,0 +1,116 @@
+.container {
+  position: relative;
+  width: fit-content;
+  padding: 15px 0 0 0;
+}
+
+.textField {
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Raleway", "san-serif";
+  outline: none;
+  width: 200px;
+}
+
+.textField.outlined {
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.textField.outlined.primary {
+  border: 2px solid var(--primary-hover-color);
+}
+
+.textField.outlined.secondary {
+  border: 2px solid var(--secondary-hover-color);
+}
+
+.textField.outlined.plain {
+  border: 2px solid var(--plain-hover-color);
+}
+
+.textField.outlined.primary:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.textField.outlined.secondary:focus {
+  border: 2px solid var(--secondary-color);
+}
+
+.textField.outlined.plain:focus {
+  border: 2px solid var(--plain-color);
+}
+
+.textField.filled {
+  border: solid 2px transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.textField.filled.primary {
+  background-color: var(--primary-hover-color);
+}
+
+.textField.filled.secondary {
+  background-color: var(--secondary-hover-color);
+}
+
+.textField.filled.plain {
+  background-color: var(--plain-hover-color);
+  color: white;
+}
+
+.label {
+  position: absolute;
+  top: calc(50% + 8px);
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  color: var(--label-color);
+  pointer-events: none;
+  padding: 0 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.textField.filled + .label.primary {
+  color: var(--primary-color);
+}
+
+.textField.filled + .label.secondary {
+  color: var(--secondary-color);
+}
+
+.textField.filled + .label.plain {
+  color: white;
+}
+
+.textField.filled + .label.focused {
+  color: black;
+}
+
+.textField.filled:focus + .label {
+  color: black;
+}
+
+.textField:focus + .label,
+.label.focused {
+  top: 4px;
+  left: 10px;
+  font-size: 12px;
+  color: black;
+  transform: translateY(-50%);
+}
+
+.textField.outlined:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+.textField.filled:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+.textField.filled:disabled + .label {
+  color: var(--label-color);
+}
